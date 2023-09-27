@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+service messageService {
+  rpc message (instructionRequest) returns (messageResponse) {}
+}
+
+message instructionRequest {
+  string peticion = 1;
+  string nombreArchivo = 2;
+  bytes archivo = 3;
+}
+
+message messageResponse {
+  string respuesta = 1;
+  string nombreArchivo = 2;
+  bytes archivo = 3;
+}
